@@ -1,6 +1,6 @@
 import os, shutil
 
-FOLDERNAMES = ['Compressed', 'Documents', 'Videos', 'Other']
+FOLDERNAMES = ['Compressed', 'Documents', 'Videos','Music', 'Other']
 
 for name in FOLDERNAMES:
     
@@ -9,6 +9,6 @@ for name in FOLDERNAMES:
     except FileExistsError:
         continue
 
-
+# ls = [f for f in os.listdir('.') if os.path.isfile(f)]
 
 print('program is done executing')
