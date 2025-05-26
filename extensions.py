@@ -19,3 +19,8 @@ DOCUMENT_FORMATS = [
     '.odt', '.tex', '.md', '.ppt', '.pptx',
     '.xls', '.xlsx', '.csv', '.epub', '.odp', '.ods'
 ]
+
+def extf(file: str):
+    
+    pos = file.find('.')
+    return file[pos:].lower()
