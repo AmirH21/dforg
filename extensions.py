@@ -20,7 +20,27 @@ DOCUMENT_FORMATS = [
     '.xls', '.xlsx', '.csv', '.epub', '.odp', '.ods'
 ]
 
+FORMAT_DICTIONARY = {
+
+    'Compressed': COMPRESSED_FORMATS,
+    'Documents': DOCUMENT_FORMATS,
+    'Music': MUSIC_FORMATS,
+    'Videos': VIDEO_FORMATS
+}
+
 def extf(file: str):
     
     pos = file.find('.')
     return file[pos:].lower()
+
+def deter(file: str):
+
+    ext = extf(file)
+
+    for folder, formats in FORMAT_DICTIONARY.items():
+
+        for lext in formats:
+            if ext == lext:
+                return folder
+            
+    return 'Other'
