@@ -10,4 +10,8 @@ for folder in ext.FORMAT_DICTIONARY.keys():
 
 ls = [f for f in os.listdir('.') if os.path.isfile(f)]
 
+for file in ls:
+    
+    shutil.move(file, f'{ext.deter(file)}/{file}')
+
 print('program is done executing')
