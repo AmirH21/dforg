@@ -1,15 +1,13 @@
 import os, shutil
 import extensions as ext
 
-FOLDERNAMES = ['Compressed', 'Documents', 'Videos','Music', 'Other']
+for folder in ext.FORMAT_DICTIONARY.keys():
 
-for name in FOLDERNAMES:
-    
     try:
-        os.mkdir(name)
+        os.mkdir(folder)
     except FileExistsError:
         continue
 
-#ls = [f for f in os.listdir('.') if os.path.isfile(f)]
+ls = [f for f in os.listdir('.') if os.path.isfile(f)]
 
 print('program is done executing')

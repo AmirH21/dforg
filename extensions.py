@@ -25,7 +25,8 @@ FORMAT_DICTIONARY = {
     'Compressed': COMPRESSED_FORMATS,
     'Documents': DOCUMENT_FORMATS,
     'Music': MUSIC_FORMATS,
-    'Videos': VIDEO_FORMATS
+    'Videos': VIDEO_FORMATS,
+    'Other': []
 }
 
 def extf(file: str):
